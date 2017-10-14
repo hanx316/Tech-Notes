@@ -3,17 +3,20 @@
 ---
 
 ES6以前，JS有五种基本数据类型（又叫原始类型，primitive），undefined、null、Boolean、Number和String，以及一种复杂数据类型（complex），Object
+
 ES6新增了一种新的基本数据类型，Symbol
+
 目前，JS共计有七种数据类型，六个基本类型，一个复杂类型
 
 ## Undefined
 
 Undefined类型的值为undefined
+
 常见就是：
-变量声明之后但未赋值，此时变量的值是undefined
-访问了对象不存在的属性会得到undefined的值
-函数调用时没有传入实参，访问形参的值是undefined
-函数没有返回值时，默认返回undefined
+- 变量声明之后但未赋值，此时变量的值是undefined
+- 访问了对象不存在的属性会得到undefined的值
+- 函数调用时没有传入实参，访问形参的值是undefined
+- 函数没有返回值时，默认返回undefined
 
 ```js
 var msg
@@ -27,6 +30,7 @@ undefined === undefined     // true
 **需要注意typeof操作符**
 
 当对一个未被声明过的变量执行typeof操作符也会返回undefined
+
 对于let和const声明，由于不会存在声明提升以及TDZ的存在，对当前作用域内在let和const声明之前的变量进行typeof操作符会报错
 
 ```js
@@ -40,6 +44,7 @@ let b
 ## Null
 
 Null类型的值为null
+
 null表示一个空对象指针，`typeof null === 'Object' // true`
 
 编程语言中都有对于空值，即没有值的表示
