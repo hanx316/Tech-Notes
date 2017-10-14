@@ -90,4 +90,4 @@ Number(undefined)   // NaN
 
 参考资料
 - 《JavaScript高级程序设计》（第三版）
-- [undefined与null的区别](http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html)
+- [undefined与null的区别 - 阮一峰](http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html)
