@@ -1,0 +1,59 @@
+# Git使用笔记
+
+与集中式管理的svn不同，git作为分散型版本管理的代表，流程上要复杂很多。不过就像玉伯说Vue是先甜后苦，React是先苦后甜一样，世间难易之事大抵如此吧，在使用过svn和git之后，我倒也是觉得svn是先甜后苦，git是先苦后甜
+
+---
+
+## Git安装
+
+### windows平台
+
+windows平台安装git可以直接用这个[git for windows](https://git-for-windows.github.io/)，也叫`msysgit`，自带了git命令行工具和一个图形界面工具
+
+安装的时候可以选择添加git到环境变量，方便在cmd使用
+
+还有一个[乌龟Git(TortoiseGit)](https://tortoisegit.org/)可视化操作软件，虽然日常都用命令行，但是也可以装上，搭配**Beyond Compare**在比对文件版本差异时很方便
+
+## Git配置
+
+```
+# 查看配置信息
+git config --list
+
+# 设置用户名
+git config --global user.name hanx
+
+# 设置邮箱
+git config --global user.email hanx@mail.com
+
+# 设置提交git时自动换行转化为lf
+git config --global core.autocrlf input
+
+```
+
+windows平台下的换行默认是CRLF，Linux和Mac下的换行的则是LF，这是一个坑，比如shell脚本在windows下保存为CRLF换行的话，执行起来就会报错，而光从代码上看是完全正确的
+
+## 公钥和私钥
+
+这一点主要涉及到本地和远程仓库的通信问题，一般来讲远程仓库要判断用户访问并获取代码的权限可以通过用户名密码的方式，不过这样验证一来需要频繁输入显得麻烦，二来也有密码暴露的风险
+
+git使用了ssh协议，这种协议主要用于本地计算机和远程计算机之间的通信，参考[SSH原理与运用 - 阮一峰](http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html)
+
+简单说就是，公钥可以随意暴露，而私钥则存在用户自己手中不能泄露，用于二次加密和验证，同时也免去了输入密码的步骤
+
+```
+# 以自己的邮箱设置密钥
+ssh-keygen -t rsa -C hanx@mail.com
+
+# 到.ssh目录下查看密钥文件和公钥
+cd ~/.ssh
+ls
+cat ~/.ssh/id_rsa.pub
+```
+
+首次使用可以直接创建，Windows系统会在默认的用户路径下（例如 C:\users\xxx）新建`.ssh\id_rsa和.ssh\id_rsa.pub`两个文件，公钥存放在.pub文件中
+
+如果已经有了密钥也可以再次生成，选择覆盖掉，也可以保存备份起来，以便将来重装系统或者其他情况可以复用旧的公私钥
+
+私钥不用管它，公钥就是我们需要提供给远程仓库管理者添加访问权限了，以github为例，在setting里边添加ssh key就能将自己的本机和github关联起来
+
