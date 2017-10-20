@@ -12,3 +12,9 @@
 
 - [Learn Git Branching](https://learngitbranching.js.org/)
 完整做一遍基本可以理解分支和索引操作的大杀器
+
+- [Git文档](https://git-scm.com/docs)
+Git的官方文档，查命令和参数的权威地方
+
+- [Pro Git](https://git-scm.com/book/en/v2)
+大名鼎鼎的<Pro Git>，即中文出版的《精通Git》这本书，目前是第二版，Git官方网站可以免费阅读，右侧可以选择中文翻译
