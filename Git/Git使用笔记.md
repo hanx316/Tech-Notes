@@ -16,7 +16,7 @@ windows平台安装git可以直接用这个[git for windows](https://git-for-win
 
 ## Git配置
 
-```
+```bash
 # 查看配置信息
 git config --list
 
@@ -41,7 +41,7 @@ git使用了ssh协议，这种协议主要用于本地计算机和远程计算�
 
 简单说就是，公钥可以随意暴露，而私钥则存在用户自己手中不能泄露，用于二次加密和验证，同时也免去了输入密码的步骤
 
-```
+```bash
 # 以自己的邮箱设置密钥
 ssh-keygen -t rsa -C hanx@mail.com
 
@@ -57,3 +57,52 @@ cat ~/.ssh/id_rsa.pub
 
 私钥不用管它，公钥就是我们需要提供给远程仓库管理者添加访问权限了，以github为例，在setting里边添加ssh key就能将自己的本机和github关联起来
 
+## 日常使用 - 本地新建、添加、提交及关联并推送远程仓库
+
+```bash
+# 本地初始化一个git仓库
+git init
+
+# 添加指定文件修改记录到暂存区
+git add <file>
+git add <file> <file>
+
+# 添加所有文件修改记录到暂存区
+git add .
+
+# 将当前暂存区的修改提交到本地仓库
+git commit
+git commit -m '提交说明'
+
+# 关联指定远程仓库
+git remote add <仓库名，一般命名为origin> <仓库地址，http或者ssh>
+
+# 克隆远程仓库
+git clone <仓库地址，http或者ssh>
+
+# 本地修改推送到远程仓库
+git push <远程仓库名，例如origin> <远程分支名，例如master>
+```
+
+## 日常使用 - 分支操作
+
+```bash
+# 创建分支
+git branch <name>
+
+# 切换到指定分支
+git checkout <name>
+
+# 创建并切换到该分支
+git checkout -b <name>
+
+# 查看当前本地分支
+git branch
+
+# 查看当前所有分支(本地和远程) all
+git branch -a
+
+# 查看当前所有分支并附上提交信息
+git branch -a -vv
+
+```
