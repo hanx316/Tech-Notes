@@ -80,9 +80,17 @@ git remote add <仓库名，一般命名为origin> <仓库地址，http或者ssh
 # 克隆远程仓库
 git clone <仓库地址，http或者ssh>
 
+# 克隆远程仓库到指定目录
+git clone <url> <directory>
+
 # 本地修改推送到远程仓库
 git push <远程仓库名，例如origin> <远程分支名，例如master>
+
+# 本地推送到远程时进行分支关联
+git push -u <repo> <branch>
 ```
+
+`push`时如果省略仓库名，则默认`origin`
 
 ## 日常使用 - 分支操作
 
