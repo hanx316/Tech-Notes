@@ -25,6 +25,9 @@ Boolean(0)
 Boolean(-0)
 Boolean(NaN)                            // 0和NaN => false
 
+// Symbol
+Boolean(Symbol())                       // Symbol() => true
+
 // Object
 Boolean({})
 Boolean([])
