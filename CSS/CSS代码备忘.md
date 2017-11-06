@@ -53,24 +53,23 @@ display: -webkit-box;
 overflow: hidden;
 ```
 
-跨浏览器兼容方案参考
+跨浏览器兼容方案参考，定位一个伪元素进行模拟
 
 ```css
 p {
-  position:relative;
-  line-height:1.4em;
+  position: relative;
+  line-height: 1.4em;
   /* 3 times the line-height to show 3 lines */
-  height:4.2em;
-  overflow:hidden;
+  height: 4.2em;
+  overflow: hidden;
 }
 p::after {
-  content:"...";
-  font-weight:bold;
-  position:absolute;
-  bottom:0;
-  right:0;
-  padding:0 20px 1px 45px;
-  background:url(http://newimg88.b0.upaiyun.com/newimg88/2014/09/ellipsis_bg.png) repeat-y;
+  content: '...';
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 20px 1px 45px;
 }
 ```
 
