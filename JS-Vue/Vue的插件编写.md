@@ -1,4 +1,4 @@
-Vue的插件编写
+# Vue的插件编写
 
 ---
 
@@ -8,7 +8,7 @@ Vue的插件编写
 
 如果是对象的话，必须提供一个名为`install`的方法，调用`Vue.use()`会自动调用它。如果插件本身是一个函数，那么它也将作为`install`方法被调用。通常在对Vue的操作都写在这个方法里面
 
-下面是一个添加全局组件的例子
+下面是一个注册全局组件的例子
 
 ```
 // 全局组件
@@ -33,4 +33,4 @@ import Global from './Components/Global'
 Vue.use(Global)
 ```
 
-其他诸如在`Vue.prototype`上挂载方法也可以通过写在`install`方法里完成
+其他诸如在`Vue.prototype`上挂载方法也可以通过写在`install`方法里完成，具体可参考官方教程
