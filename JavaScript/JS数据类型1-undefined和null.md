@@ -1,6 +1,5 @@
 # JS数据类型1 - undefined和null
 
----
 
 ES6以前，JS有五种基本数据类型（又叫原始类型，primitive），undefined、null、Boolean、Number和String，以及一种复杂数据类型（complex），Object
 
