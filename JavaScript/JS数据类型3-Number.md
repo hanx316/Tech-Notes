@@ -254,3 +254,4 @@ var str = '1.1'
 -  [MDN文档 - Number对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number)
 -  [MDN文档 - parseInt](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
 -  [MDN文档 - parseFloat](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
+-  [ECMAScript标准定义](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
