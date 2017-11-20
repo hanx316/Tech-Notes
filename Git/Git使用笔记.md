@@ -14,6 +14,10 @@ windows平台安装git可以直接用这个[git for windows](https://git-for-win
 
 还有一个[乌龟Git(TortoiseGit)](https://tortoisegit.org/)可视化操作软件，虽然日常都用命令行，但是也可以装上，搭配**Beyond Compare**在比对文件版本差异时很方便
 
+### macos平台
+
+mac上推荐先安装`homebrew`，然后`brew install git`即可，git会被安装到`/usr/local/cellar`目录下
+
 ## Git配置
 
 ```bash
@@ -42,7 +46,7 @@ git使用了ssh协议，这种协议主要用于本地计算机和远程计算�
 简单说就是，公钥可以随意暴露，而私钥则存在用户自己手中不能泄露，用于二次加密和验证，同时也免去了输入密码的步骤
 
 ```bash
-# 以自己的邮箱设置密钥
+# 以自己的邮箱设置密钥，首次执行会让输入密码之类的，可以直接跳过
 ssh-keygen -t rsa -C hanx@mail.com
 
 # 到.ssh目录下查看密钥文件和公钥
