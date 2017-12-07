@@ -2,8 +2,6 @@
 
 与集中式管理的svn不同，git作为分散型版本管理的代表，流程上要复杂很多。不过就像玉伯说Vue是先甜后苦，React是先苦后甜一样，世间难易之事大抵如此吧，在使用过svn和git之后，我倒也是觉得svn是先甜后苦，git是先苦后甜
 
----
-
 ## Git安装
 
 ### windows平台
@@ -18,7 +16,7 @@ windows平台安装git可以直接用这个[git for windows](https://git-for-win
 
 mac上推荐先安装`homebrew`，然后`brew install git`即可，git会被安装到`/usr/local/cellar`目录下
 
-mac下会自动生成一个`.DS_Store`的文件，用于描述文件的一些位置信息之类的，可以选择在mac下设置不生成。如果没有设置的话，这个文件也不用提交到git，需要git设置全局忽略该文件。
+mac下会自动生成一个`.DS_Store`的文件，用于描述文件的一些位置信息之类的，可以选择在mac下设置不生成。如果没有设置的话，这个文件也不用提交到git，需要git设置全局忽略该文件
 
 ```bash
 echo .DS_Store >> ~/.gitignore_global
