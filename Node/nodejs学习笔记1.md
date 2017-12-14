@@ -60,10 +60,37 @@ npm uninstall <name>
 
 # 全局删除包
 npm uninstall <name> -g
+
+# 安装固定版本的包
+npm i <name@version>
+
+# 写入安装信息到package.json的dependencies
+npm i <name> --save(-S)
+
+# 写入安装信息到package.json的devdependencies
+npm i <name> --save-dev(-D)
 ```
+
+官网及镜像链接
 
 [npm官网](https://www.npmjs.com)
 
 [npm文档](https://docs.npmjs.com)
 
 [npm淘宝镜像](https://npm.taobao.org/)
+
+推荐使用nrm来管理和切换源
+
+```bash
+# 全局安装nrm
+npm i nrm -g
+
+# 查看版本
+nrm --version
+
+# 列出所有当前源
+nrm ls
+
+# 使用某个源
+nrm use cnpm
+```
