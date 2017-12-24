@@ -26,8 +26,11 @@ git config --global core.excludesfile ~/.gitignore_global
 ## Git配置
 
 ```bash
-# 查看配置信息
-git config --list
+# 查看当前仓库配置信息
+git config --list(-l)
+
+# 查看全局配置信息
+git config -l --global
 
 # 设置用户名
 git config --global user.name hanx
@@ -41,6 +44,13 @@ git config --global core.autocrlf input
 ```
 
 windows平台下的换行默认是CRLF，Linux和Mac下的换行的则是LF，这是一个坑，比如shell脚本在windows下保存为CRLF换行的话，执行起来就会报错，而光从代码上看是完全正确的
+
+windows一般使用git for windows, 通常不会发现中文显示有问题，mac在终端使用git的时候中文文件名可能会显示unicode编码，通常进行如下设置即可
+
+```bash
+# 不对0×80以上的字符进行quote，中文显示正常
+git config --global core.quotepath false
+```
 
 ## 公钥和私钥
 
