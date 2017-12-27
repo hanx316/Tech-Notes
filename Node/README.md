@@ -4,7 +4,7 @@
 
 - [ ] CommonJS规范与node模块
 
-- [ ] path模块常用api
+- [x] path模块常用api
 
 - [ ] fs模块常用api和实现文件复制
 
