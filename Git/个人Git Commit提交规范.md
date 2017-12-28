@@ -11,7 +11,7 @@
   - **[fix]** fix 修复问题
   - **[doc]** document 文档增删改
   - **[conf]** config 配置增删改
-  - **[form]** format 代码等文件格式，排版等修改
-  - **[ref]** refactor 不涉及新增功能和修复问题的代码重构
+  - **[form]** format 代码格式，排版等修改
+  - **[ref]** refactor 不涉及新增功能和修复问题的代码重构，以及目录结构的调整
 
 4. 一次commit如包含多个分类提交信息，须按类别逐项列出，如`[feat]新增A功能 [conf]修改B配置`
