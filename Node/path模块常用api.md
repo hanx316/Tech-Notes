@@ -40,3 +40,20 @@ path.resolve('foo/bar', '/bar/baz', 'a.html')   // \bar\baz\a.html
 // process是一个全局访问变量，取得当前进程信息，调用cwd(current work directory)方法，获取当前执行脚本的工作目录（绝对路径）
 process.cwd()
 ```
+
+### 补充说明
+
+- 通常返回的路径目录分隔符是平台的分隔符，比如 windows 是\，linux是 /，不过从前面代码来看，`path.dirname`有点不一样
+
+- 只就路径而言，`path.resolve(from, ...to)`这个命令可以理解为从第一个绝对路径开始，不断执行`cd`最后查看当前路径
+
+```bash
+# path.resolve('foo/bar', '/bar/baz', 'a', 'b/c') 
+cd /bar/baz
+cd a
+cd b/c
+# windows
+echo %cd% 
+# linux
+pwd
+```
