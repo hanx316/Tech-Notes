@@ -6,7 +6,7 @@
 
 Win10不像之前Win7那样可以直接在系统升级选项里面禁用升级，得通过禁用服务来禁止系统自动升级
 
-WIN+R打开运行，输入services.msc回车
+`win + r`打开运行，输入`services.msc`
 
 然后找到Windows update服务，双击打开
 
@@ -14,7 +14,7 @@ WIN+R打开运行，输入services.msc回车
 
 ### 查看系统激活的相关命令
 
-打开命令行或者powershell
+`win + r`打开运行，输入以下命令
 
 ```bash
 # 查看激活信息，包括：激活ID、安装ID、激活截止日期等信息
