@@ -138,6 +138,15 @@ git merge <name>
 # 将当前分支变基到指定分支(在指定分支产生一个新的记录，并且两条分支合并到一条时间线上)
 git rebase <name>
 
+# 删除本地分支
+git branch -d <name>
+
+# 删除远程分支
+git push origin :<name>
+
+# 如果删除了远程分支，而在另一台机器上没有同步信息可以执行
+git fetch -p
+
 ```
 
 ## 日常使用 - 标签
