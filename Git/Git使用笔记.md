@@ -93,6 +93,9 @@ git add .
 git commit
 git commit -m '提交说明'
 
+# 修改上一次提交的message，未push
+git commit --amend
+
 # 关联指定远程仓库
 git remote add <仓库名，一般命名为origin> <仓库地址，http或者ssh>
 
