@@ -39,3 +39,20 @@ cscript "C:/Program Files/Microsoft Office/Office15/ospp.vbs" /dstatus
 ```
 
 安装路径替换为自己的
+
+### 照片/图片 查看
+
+win10自带有照片应用，之前用的时候感觉不太方便，没有以前的照片查看器好用，选择打开默认又没有这一项
+
+以下方法可以恢复照片查看器：
+
+1. Win+R打开运行，输入regedit打开注册表编辑器
+
+2. 找到这一项
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations`
+
+3. 新建`字符串值`，将新建值名称改为要关联的文件扩展名，比如`.jpg`，数值数据填写为`PhotoViewer.FileAssoc.Tiff`，其他图片类型同理。
+
+如此再选择图片打开应该能发现照片查看器了
+
+另外，照片应用放大缩小图片的快捷操作是`ctrl+滚轮`
