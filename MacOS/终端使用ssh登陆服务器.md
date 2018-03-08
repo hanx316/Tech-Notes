@@ -3,7 +3,7 @@
 macos已经默认为我们装好了ssh，可以直接使用
 
 ```bash
-# 查看ssh文件
+# 查看ssh可执行文件
 whereis ssh
 ```
 
