@@ -31,6 +31,6 @@ vi ~/.zshrc
 
 简单这么设置一下，终端就好看多了～
 
-##### oh-my-zsh升级和卸载
+#### oh-my-zsh升级和卸载
 
 打开终端分别运行`upgrade_oh_my_zsh`和`uninstall_oh_my_zsh`即可
