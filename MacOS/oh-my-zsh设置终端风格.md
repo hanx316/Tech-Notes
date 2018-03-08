@@ -30,3 +30,7 @@ vi ~/.zshrc
 我不知道是不是我安装了homebrew所以有这个主题，就是那种亮绿色字体，黑色背景的黑客风格
 
 简单这么设置一下，终端就好看多了～
+
+##### oh-my-zsh升级和卸载
+
+打开终端分别运行`upgrade_oh_my_zsh`和`uninstall_oh_my_zsh`即可
