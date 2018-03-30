@@ -48,3 +48,14 @@ nvm use --lts
 # 查看node版本的可执行文件
 nvm which <version>
 ```
+
+## 关联默认版本
+
+每次打开终端，启用的都是标识为default的node版本，这个可以通过别名来设置
+
+```
+nvm alias default <version>
+
+# 也可以设置其他别名方便快速切换
+nvm alias <name> <version>
+```
