@@ -54,6 +54,7 @@ npm i -g npm
 
 # 查看npm配置
 npm config list(ls) --json
+npm config ls -l
 
 # 查看当前镜像 默认 https://registry.npmjs.org/
 npm config get registry
