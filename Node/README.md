@@ -2,6 +2,10 @@
 
 - [x] Node安装和npm日常使用
 
+- [x] nvm管理不同Node版本
+
+- [ ] 利用npx来执行命令行工具
+
 - [ ] CommonJS规范与node模块
 
 - [x] path模块常用api
