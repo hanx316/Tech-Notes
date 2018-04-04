@@ -96,6 +96,9 @@ git commit -m '提交说明'
 # 修改上一次提交的message，未push
 git commit --amend
 
+# 查看当前关联远程仓库信息
+git remote -v
+
 # 关联指定远程仓库
 git remote add <仓库名，一般命名为origin> <仓库地址，http或者ssh>
 
@@ -118,13 +121,16 @@ git push -u <repo> <branch>
 
 ```bash
 # 创建分支
-git branch <name>
+git branch <branch-name>
 
 # 切换到指定分支
-git checkout <name>
+git checkout <branch-name>
 
 # 创建并切换到该分支
-git checkout -b <name>
+git checkout -b <branch-name>
+
+# 关联本地分支与远程分支
+git branch --set-upstream <branch-name> <origin/branch-name>
 
 # 查看当前本地分支
 git branch
@@ -136,16 +142,19 @@ git branch -a
 git branch -a -vv
 
 # 合并指定分支到当前分支(在当前产生一个新的记录，其parent指向合并的两个分支)
-git merge <name>
+git merge <branch-name>
 
 # 将当前分支变基到指定分支(在指定分支产生一个新的记录，并且两条分支合并到一条时间线上)
-git rebase <name>
+git rebase <branch-name>
 
 # 删除本地分支
-git branch -d <name>
+git branch -d <branch-name>
+
+# 强制删除本地分支，通常用于删除尚未合并过的分支
+git branch -D <branch-name>
 
 # 删除远程分支
-git push origin :<name>
+git push origin :<branch-name>
 
 # 如果删除了远程分支，而在另一台机器上没有同步信息可以执行
 git fetch -p
@@ -157,6 +166,7 @@ git fetch -p
 ```bash
 # 给当前分支打标签
 git tag <tagname>
+git tag -a <tagname> -m '标签说明'
 
 # 查看标签信息
 git show <tagname>
