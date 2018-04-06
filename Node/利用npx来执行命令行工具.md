@@ -4,12 +4,15 @@ npx是npm在5.2以上版本提供的一个包执行工具
 
 过去如果要执行一个包的命令，要么通过全局安装将可执行文件注册到环境变量直接执行
 
-要么通过这样来执行
+要么将模块安装到本地，通过这样来执行
 
 ```bash
 ./node_modules/.bin/xxxxxx
+
 # 或者
 `npm bin`/xxxxxx
+
+# 或者通过npm run-scripts来执行
 ```
 
 现在可以直接通过`npx xxxxx`执行
