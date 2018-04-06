@@ -6,6 +6,8 @@
 
 - [x] 利用npx来执行命令行工具
 
+- [ ] Node中的全局对象
+
 - [ ] CommonJS规范与node模块
 
 - [x] path模块常用api
