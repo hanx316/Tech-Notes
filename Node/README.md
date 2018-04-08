@@ -14,6 +14,8 @@
 
 - [ ] url模块和queryString
 
+- [ ] Node中的Event Loop
+
 - [ ] fs模块常用api和实现文件复制
 
 - [ ] 阻塞与非阻塞IO
