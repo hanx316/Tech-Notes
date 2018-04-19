@@ -21,9 +21,14 @@ export default {...}
 // ./Components/Global/index.js
 import Global from './Global.vue'
 export default {
-  install() {
+  install(Vue, options) {
     Vue.component('Global', Global)
   }
+}
+// 或者
+import Global from './Global.vue'
+export default function install(Vue, options) {
+  Vue.component('Global', Global)
 }
 
 // 使用
