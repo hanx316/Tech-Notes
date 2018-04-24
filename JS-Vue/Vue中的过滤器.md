@@ -6,6 +6,8 @@ Vue官方教程中对[过滤器](https://cn.vuejs.org/v2/guide/filters.html)的�
 
 过滤器可以写在文本插值和v-bind表达式中，语法也比较特殊，是一根竖线将data和filter分隔开，一开始不太熟悉这样的语法，还以为是在做位运算。
 
+如果熟悉linux的话，也可以看出来这是借鉴管道符的思想，把前一个表达式的值通过管道传递给下一个处理函数。
+
 ```html
 <!-- 在双花括号中 -->
 {{ message | capitalize }}
