@@ -40,4 +40,6 @@ Host 别名
 
 #### 密钥方式连接
 
-待实践后再写...
+首先将公钥写入服务器`~/.ssh/authorized_keys`，如果没有生成过ssh-key可以使用`ssh-keygen`命令生成
+
+接下来
