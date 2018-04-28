@@ -42,4 +42,11 @@ Host 别名
 
 首先将公钥写入服务器`~/.ssh/authorized_keys`，如果没有生成过ssh-key可以使用`ssh-keygen`命令生成
 
-接下来
+接下来打开`/etc/ssh/sshd_config`文件，确保开启认证，比如像下面那样默认注释是yes就不用管
+
+```
+#RSAAuthentication yes
+#PubkeyAuthentication yes
+```
+
+接下来重启服务即可`service sshd restart`
