@@ -9,7 +9,7 @@ whereis ssh
 
 #### 基本方法
 
-可以使用`ssh username@ip_address`来登陆远程服务器主机，当然前提是服务端的主机开启了ssh服务，输入该命令后会提示输入密码，正确输入后即可连接，首次连接时会提示host的相关信息，输入yes即可
+可以使用`ssh -p <port_number> <username>@<ip_address>`来登陆远程服务器主机，当然前提是服务端的主机开启了ssh服务，输入该命令后会提示输入密码，正确输入后即可连接，首次连接时会提示host的相关信息，输入yes即可
 
 一般情况下都会用root用户来登陆（可以不输入用户名，直接输入ip），也有出于安全考虑，而采用其他用户，或者修改root用户的权限。如果遇到输入密码正确，但仍然提示`Permission denied`，可以考虑是服务端没有开通对应用户的ssh权限
 
@@ -41,6 +41,16 @@ Host 别名
 #### 密钥方式连接
 
 首先将公钥写入服务器`~/.ssh/authorized_keys`，如果没有生成过ssh-key可以使用`ssh-keygen`命令生成
+
+```bash
+# 可以先把公钥文件上传到临时目录
+cd ~/.ssh
+scp -P <port_number> id_rsa.pub <username>@<ip_address>:/tmp
+
+# 然后将其中的内容写入文件后再删除
+cd /tmp && id_rsa.pub >> ~/.ssh/authorized_keys
+rm id_rsa.pub
+```
 
 接下来打开`/etc/ssh/sshd_config`文件，确保开启认证，比如像下面那样默认注释是yes就不用管
 
