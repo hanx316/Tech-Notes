@@ -93,6 +93,9 @@ git add .
 git commit
 git commit -m '提交说明'
 
+# 如果只有单个文件可以合并操作
+git commit -a -m '提交说明'
+
 # 修改上一次提交的message，未push
 git commit --amend
 
