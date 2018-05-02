@@ -120,6 +120,16 @@ git push -u <repo> <branch>
 
 `push`时如果省略仓库名，则默认`origin`
 
+## 日常使用 - 查看记录日志
+
+```bash
+# 查看提交记录日志
+git log
+
+# 查看操作记录日志
+git reflog
+```
+
 ## 日常使用 - 分支操作
 
 ```bash
