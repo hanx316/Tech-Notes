@@ -16,3 +16,9 @@ Git的官方文档，查命令和参数的权威地方
 
 - [Pro Git](https://git-scm.com/book/en/v2)
 大名鼎鼎的<Pro Git>，即中文出版的《精通Git》这本书，目前是第二版，Git官方网站可以免费阅读，右侧可以选择中文翻译
+
+- [图解Git](https://marklodato.github.io/visual-git-guide/index-en.html)
+图示讲解Git的一些关键概念
+
+- [沉浸式学Git](http://igit.linuxtoy.org/index.html)
+非常优秀简洁的一个教程，从入门开始，通过一些常用操作来学习
