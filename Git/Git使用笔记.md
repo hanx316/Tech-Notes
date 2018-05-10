@@ -128,6 +128,9 @@ git log
 
 # 查看操作记录日志
 git reflog
+
+# 一条推荐使用的日志查看命令 可以建一个别名方便使用
+git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short'
 ```
 
 ## 日常使用 - 分支操作
