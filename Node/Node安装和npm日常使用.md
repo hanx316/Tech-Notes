@@ -43,6 +43,8 @@ Linux 系统中进行源码编译安装 Node 需要确保安装有 gcc 和 gcc-c
 rpm -q gcc rpm -g gcc-c++
 # 安装依赖
 yum -y install gcc gcc-c++ kernel-devel
+# 或者图省事可以直接安装 CentOS 的开发套件
+yum -y update && yum -y groupinstall "Development Tools"
 ```
 
 Node 源码的压缩包可以到 官方地址：https://nodejs.org/dist/v8.11.3/ 或者阿里云镜像地址：https://npm.taobao.org/mirrors/node/v10.5.0/ 下载。（后面的版本号可根据需要变换）
