@@ -55,6 +55,7 @@ Node 源码的压缩包可以到 官方地址：https://nodejs.org/dist/v8.11.3/
 
 ```bash
 curl -o https://npm.taobao.org/mirrors/node/node-v8.11.3.tar.gz
+# 或者 wget https://npm.taobao.org/mirrors/node/node-v8.11.3.tar.gz
 tar -zxvf node-v8.11.3.tar.gz
 cd node-v8.11.3.tar.gz
 ./configure --prefix=/usr/local/node/8.11.3
