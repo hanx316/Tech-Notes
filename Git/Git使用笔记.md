@@ -96,8 +96,12 @@ git commit -m '提交说明'
 # 如果只有单个文件可以合并操作
 git commit -a -m '提交说明'
 
-# 修改上一次提交的message，未push
+# 修改上一次提交的 message
+# 通常用在修改了本地提交但未 push 到远程仓时，如果已经 push, 就要考虑是否能够重写 commit message 了
 git commit --amend
+git commit --amend -m 'message'
+# 如果可以重写，且本地仓库与远程仓库保持一致，那么可以强制 push 重写远程仓的历史
+git push -f
 
 # 查看当前关联远程仓库信息
 git remote -v
