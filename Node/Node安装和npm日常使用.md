@@ -22,7 +22,7 @@
 
 目前看来，Node 的版本还是保持了偶数稳定，奇数非稳定的传统，只不过版本号从中间数字移到了首位大版本号。Node 的 LTS(Long Time Support，长期稳定支持) 版本都出现在 4.x，6.x，8.x。
 
-截至目前，Node 的最新版本是10.6.0，LTS 版本是8.11.3，显然可以看出当 Node 最新版本升至11时，就是 10.x 作为 LTS 的时候。
+截至目前，Node 的最新版本是10.6.0，LTS 版本是8.11.3，显然，当 Node 最新版本升至11时，就是 10.x 作为 LTS 的时候。
 
 ### 安装包安装固定版本
 
@@ -30,13 +30,44 @@ nodejs到今天已经走过了10个年头，整个node的生态圈已经非常�
 
 Windows和macOS安装node都可以直接在[Nodejs官网](http://nodejs.org/zh-cn)上下载安装包，无脑下一步安装。
 
-Windows下载对应bit的.msi安装包，macOS下载.pkg即可。可以通过下载新版本的安装包进行更新node版本。
+Windows下载对应bit的.msi安装包，macOS下载.pkg即可。可以通过下载新版本的安装包进行更新 node 版本。
 
 安装成功之后在命令行执行`node -v`可以查看node安装的版本。
 
-### 二进制文件安装
+### CentOS 环境源码编译安装 Node
 
-目前还没有用到这种方式，以后遇到再总结。
+Linux 系统中进行源码编译安装 Node 需要确保安装有 gcc 和 gcc-c++ 这两个 C/C++ 编译器，具体版本和其他一些要求可以查看官方的 [Build 文档](https://github.com/nodejs/node/blob/master/BUILDING.md) 查看。
+
+```bash
+# 查看 gcc gcc-c++ 安装情况
+rpm -q gcc rpm -g gcc-c++
+# 安装依赖
+yum -y install gcc gcc-c++ kernel-devel
+```
+
+Node 源码的压缩包可以到 官方地址：https://nodejs.org/dist/v8.11.3/ 或者阿里云镜像地址：https://npm.taobao.org/mirrors/node/v10.5.0/ 下载。（后面的版本号可根据需要变换）
+
+对应的文件名是 node-v版本号.tar.gz。
+
+编译流程：
+
+```bash
+curl -o https://npm.taobao.org/mirrors/node/node-v8.11.3.tar.gz
+tar -zxvf node-v8.11.3.tar.gz
+cd node-v8.11.3.tar.gz
+./configure --prefix=/usr/local/node/8.11.3
+make
+make test
+make install
+
+# 设置环境变量
+vim /etc/profile
+export NODE_HOME=/usr/local/node/8.11.3
+export PATH=$NODE_HOME/bin:$PATH
+source /etc/profile
+```
+
+整个编译安装过程视机器性能，我的单核主机用了差不多40分钟的样子。
 
 ### Node版本管理简单介绍
 
