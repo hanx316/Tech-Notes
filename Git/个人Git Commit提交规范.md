@@ -17,3 +17,5 @@ type 说明：
 - refactor: 不涉及新增功能和修复问题的代码重构，以及目录结构的调整
 
 4. 尽量避免一次提交多个不同类型的修改
+
+5. [阮一峰博客关于 git commit message 的介绍](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
