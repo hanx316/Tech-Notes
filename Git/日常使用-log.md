@@ -7,6 +7,9 @@ git log
 # 查看操作记录日志
 git reflog
 
+# 查看某个人的提交记录
+git log --author=<name>
+
 # 查看简化日志记录
 git log --pretty=oneline --graph --decorate --all
 
