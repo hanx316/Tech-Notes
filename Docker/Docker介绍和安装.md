@@ -17,3 +17,21 @@ Docker 与传统的 VM 相比，它更轻量，启动速度更快，单台主机
 ## macOS上安装Docker
 
 Mac 上安装和使用 Docker 非常简单，参考官方文档 [Install Docker for Mac](https://docs.docker.com/docker-for-mac/install/) 下载 Docker for Mac 即可，体验很好。
+
+安装 Docker for Mac 基于 HyperKit VM，对电脑有一定要求，需要 2010 年以后出产的设备，10.11以上的系统，4G 以上的内存等，具体可以查看文档，不过对于如今的 MacBookPro 来说应该都不是问题了。如果不满足 Docker for Mac 的安装条件，可以使用基于 Oracle VirtualBox 的 Docker Toolbox。
+
+关于 Docker for Mac 和 Docker Toolbox 的比较可以查看[官方的这篇文章](https://docs.docker.com/docker-for-mac/docker-toolbox/)。
+
+## 设置国内镜像源
+
+由于万恶的某墙，拉取镜像速度会非常缓慢，可以设置国内的镜像源地址。我通常使用 Docker 官方的中国镜像 https://registry.docker-cn.com 。
+
+Docker for Mac 启动后可以在桌面右上角图标打开 Preferences，然后打开 Daemon，在 Registry Mirrors 设置即可。
+
+Linux 安装的 Docker 可以在 `/etc/docker/daemon.json` 文件中配置
+
+```
+{
+  "registry-mirrors": ["https://registry.docker-cn.com"]
+}
+```
