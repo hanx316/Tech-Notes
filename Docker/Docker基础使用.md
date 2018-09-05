@@ -17,17 +17,22 @@ docker pull <name>:<tag>
 
 # 列出所有本地镜像
 docker images
+docker image ls
 
 # 列出所有本地镜像，包括隐藏镜像
 docker images -a
+docker image ls -a
 
 # 列出所有容器id
 docker images -q
+docker image ls -q
 
 # 删除镜像
 docker rmi <image-id> <image-id> ...
+docker image rm <image-id> <image-id>
 
 # 删除所有镜像
 docker rmi $(docker images -q)
+docker image rm $(docker images -q)
 
 ```
