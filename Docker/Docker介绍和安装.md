@@ -30,7 +30,7 @@ Docker for Mac 启动后可以在桌面右上角图标打开 Preferences，然�
 
 Linux 安装的 Docker 可以在 `/etc/docker/daemon.json` 文件中配置
 
-```
+```json
 {
   "registry-mirrors": ["https://registry.docker-cn.com"]
 }
@@ -40,7 +40,7 @@ Linux 安装的 Docker 可以在 `/etc/docker/daemon.json` 文件中配置
 
 安装成功并启动 Docker 服务以后可以通过命令来查看一些基本信息，同时也可以确认安装成功，正常使用。
 
-```
+```bash
 # 版本号查看三件套
 docker --version
 docker-compose --version

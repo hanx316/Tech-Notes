@@ -2,11 +2,11 @@
 
 ## 镜像和容器操作常用命令
 
-```
+```bash
 # 搜索关键词相关镜像
-docker search <name>
+docker search [OPTIONS] TERM
 
-# 搜索信息过滤，例如：搜索 star 30以上的 ubuntu 镜像
+# 搜索信息过滤，e.g: 搜索 star 30以上的 ubuntu 镜像
 docker search -f=stars=30 ubuntu
 
 # 拉取镜像，默认拉取 tag 为 latest 的镜像
