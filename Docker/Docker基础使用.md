@@ -35,4 +35,7 @@ docker image rm <image-id> <image-id>
 docker rmi $(docker images -q)
 docker image rm $(docker images -q)
 
+# 使用镜像新建容器并启动
+docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
 ```
