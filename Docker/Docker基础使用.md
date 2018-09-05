@@ -22,7 +22,7 @@ docker images
 docker images -a
 
 # 列出所有容器id
-docker image -q
+docker images -q
 
 # 删除镜像
 docker rmi <image-id> <image-id> ...
