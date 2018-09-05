@@ -1,5 +1,19 @@
 # Docker基础使用
 
+## 帮助命令查询
+
+Docker 命令提供了非常不错的帮助信息，方便查询学习和使用。
+
+```bash
+# 查询 docker 命令的帮助信息
+docker --help
+
+# 查询 docker 二级命令的帮助信息
+docker COMMAND --help
+# e.g
+docker images --help
+```
+
 ## 镜像和容器操作常用命令
 
 ```bash
