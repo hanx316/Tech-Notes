@@ -14,7 +14,7 @@ docker COMMAND --help
 docker images --help
 ```
 
-## 镜像和容器操作常用命令
+## 镜像和容器操作常用命令和一些示例
 
 ```bash
 # 搜索关键词相关镜像
@@ -51,5 +51,9 @@ docker image rm $(docker images -q)
 
 # 使用镜像新建容器并启动
 docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+# 使用 node 镜像执行命令
+docker run node:8.11.4-alpine node -v
+docker run node:8.11.4-alpine /bin/echo 'Hello world'
 
 ```
