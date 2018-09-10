@@ -29,3 +29,5 @@ docker exec -it mongo3.4 mongo
 # 也可以通过设置 host 参数为主机 ip 进入 mongo shell，但是会新开启一个容器
 docker run -it mongo:3.4 mongo --host [主机 ip]
 ```
+
+启动 mongo 服务容器之后，Robo 3T 之类的可视化工具就可以通过连接 `localhost` 连接数据库了。
