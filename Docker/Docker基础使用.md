@@ -56,4 +56,19 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 docker run node:8.11.4-alpine node -v
 docker run node:8.11.4-alpine /bin/echo 'Hello world'
 
+# 查看当前运行的容器
+docker ps
+docker container ls
+
+# 查看所有容器
+docker ps -a
+docker container ls -a
+
+# 停止运行的容器
+docker stop [OPTIONS] CONTAINER [CONTAINER...]
+docker container stop CONTAINER
+
+# 启动停止的容器
+docker start [OPTIONS] CONTAINER [CONTAINER...]
+docker container start CONTAINER
 ```
