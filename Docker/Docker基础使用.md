@@ -64,11 +64,19 @@ docker container ls
 docker ps -a
 docker container ls -a
 
-# 停止运行的容器
+# 停止运行的容器，可以通过容器 id 访问到容器
 docker stop [OPTIONS] CONTAINER [CONTAINER...]
 docker container stop CONTAINER
 
 # 启动停止的容器
 docker start [OPTIONS] CONTAINER [CONTAINER...]
 docker container start CONTAINER
+
+# 删除所有停止运行的容器
+docker container prune
+docker container prune -f
+
+# 删除单个停止运行的容器
+docker container rm CONTAINER
+
 ```
