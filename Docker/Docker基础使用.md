@@ -52,7 +52,7 @@ docker image rm $(docker images -q)
 # 使用镜像新建容器并启动
 docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
-# 使用 node 镜像执行命令
+# 使用 node 镜像执行命令，更多使用示例可以参考 Docker-MongoDB实战
 docker run node:8.11.4-alpine node -v
 docker run node:8.11.4-alpine /bin/echo 'Hello world'
 
