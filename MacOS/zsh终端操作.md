@@ -22,4 +22,18 @@ command + enter
 # 打开文件或目录
 command + 鼠标左键单击
 
+# 清空当前行
+ctrl + u
+
+# 光标移到行末
+ctrl + e
+
+# 光标移到行首
+ctrl + as
+
+# 删除光标之前的单词
+ctrl + w
+
+# 删除从光标到行尾的内容
+ctrl + k
 ```
