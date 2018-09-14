@@ -22,6 +22,12 @@ Scrum 基于经验式过程控制理论。它包含三大支柱：透明、检�
 
 Scrum 框架包含的内容可以用 3-3-5-5 一个组合来概括。
 
+### Sprint
+
+Sprint 是 Scrum 的核心，长度一般为 1-3 周。用于实现完成的，可用的，潜在可发布的产品增量。
+
+Sprint 与 Sprint 之间没有间隔，前一个结束，后一个立即开始。
+
 ### 三个角色
 
 - Product Owner 产品负责人
@@ -80,4 +86,22 @@ Sprint 待办列表中的项目需要拥有足够的细节，任何进度的变�
 
 Scrum 团队需要明确“完成”的定义，用于评估增量是否完成。
 
+### 五个会议
 
+- Sprint Plan
+- Daily Scrum
+- Sprint Refinement
+- Sprint Review
+- Sprint Retrospect
+
+#### Sprint Plan
+
+WHEN: Sprint 开始的第一天上午，2周的 Sprint 不超过 4 小时。
+
+WHAT: 明确 Sprint 的目标，澄清所有选定的产品待办列表项，确定如何完成所选择的待办项目。
+
+WHO: 
+
+### 五个价值观
+
+承诺，勇气，专注，开放和尊重。团队成员之间应该彼此信任。
