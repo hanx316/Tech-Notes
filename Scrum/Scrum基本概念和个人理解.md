@@ -100,7 +100,39 @@ WHEN: Sprint 开始的第一天上午，2周的 Sprint 不超过 4 小时。
 
 WHAT: 明确 Sprint 的目标，澄清所有选定的产品待办列表项，确定如何完成所选择的待办项目。
 
-WHO: 
+WHO: Scrum 团队 + 利益相关者 + 可能的其他人。
+
+#### Daily Scrum
+
+WHEN: 团队确定一个时间，以后 24 小时为周期每日举行，时限为 15 分钟。
+
+WHAT: 主要在于检视进度，快速调整，内容和形式不限，一个可用的范例是：围绕 Sprint 目标，我昨天做了什么，今天准备做什么，过程中遇到了什么问题。
+
+WHO: TEAM 和 SM。
+
+#### Sprint Refinement
+
+WHEN: 以两周为例，一般在 Sprint 第二周选定时间，时限为 2 小时。
+
+WHAT: 为之后 Sprint 需要做的工作进行梳理，澄清和预估 PB 里的其他待办项目，减轻 Plan 会议的负担。
+
+WHO: Scrum 团队 + 利益相关者。
+
+#### Sprint Review
+
+WHEN: Sprint 的最后一天。对于两周的 Sprint，不超过 2 小时。
+
+WHAT: 检视和展示这个 Sprint 完成的潜在可交付产品增量。主要是对 Scrum 团队之外的人。
+
+WHO: Scrum 团队 + 利益相关者。
+
+#### Sprint Retrospect
+
+WHEN: Sprint 的最后一天。对于两周的 Sprint，不超过 1.5 小时。
+
+WHAT: 检视这个 Sprint 中关于人、关系、过程和工具等做得好的，做得不好的，同时制定后续改进团队工作方式的计划。
+
+WHO: Scrum 团队。
 
 ### 五个价值观
 
