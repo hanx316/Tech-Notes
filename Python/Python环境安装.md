@@ -15,3 +15,13 @@ Windows 系统安装时注意勾选上添加 Python 到环境变量，其他都�
 macOS 由于已经自带了 Python2.x 版本，所以输入 `python` 会打开 2.x 版本的 Python Shell，可以通过 `python3` 打开 3.x 版本的。
 
 Python 还自带了一个 Python Shell 交互工具 IDLE，可以直接打开使用。
+
+## VS Code 配置 Python 开发环境
+
+VS Code 可以直接写 Python 代码，但是缺乏检查和一些语言提示等支持。所以需要进行一些额外的配置。
+
+1. 安装官方推荐的 Python 语言支持插件，这个现在编辑器应该会进行提示。
+
+2. 选择 Python 语言的解释器，`command + shift + p` 然后输入 `python` 选择 `Select Interpreter`，主要在 macOS 上由于共存了两个版本的 Python，所以需要指定解释器。选择 3.x 版本的解释器即可，可能存在多个选项，可以任意一个。
+
+3. 配置语法检查 Pylint。 Python3 自带了 pip3，所以选择好解释器以后应该可以根据编辑器插件的提示进行安装，或者自己在终端手动安装 `pip3 install pylint`。
