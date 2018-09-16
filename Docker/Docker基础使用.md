@@ -79,4 +79,7 @@ docker container prune -f
 # 删除单个停止运行的容器
 docker container rm CONTAINER
 
+# 删除所有容器
+docker rm $(docker ps -a -q)
+
 ```
