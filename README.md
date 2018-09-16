@@ -1,3 +1,3 @@
-# Blog-Note
+# Tech-Notes
 
-博文草稿和笔记，方便查阅
+学习技术的笔记，好记性不如 Markdown
