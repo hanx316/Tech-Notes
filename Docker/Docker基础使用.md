@@ -82,4 +82,7 @@ docker container rm CONTAINER
 # 删除所有容器
 docker rm $(docker ps -a -q)
 
+# 自动重启容器(以 非0 代码退出时自动尝试 5 次重启)
+docker run --restart=on-failure:5 IMAGE COMMAND
+
 ```
