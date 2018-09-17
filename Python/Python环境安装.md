@@ -20,10 +20,12 @@ Python 还自带了一个 Python Shell 交互工具 IDLE，可以直接打开使
 
 VS Code 可以直接写 Python 代码，但是缺乏检查和一些语言提示等支持。所以需要进行一些额外的配置。
 
+可以参考 VS Code 官方的这份指南：[Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
+
 1. 安装官方推荐的 Python 语言支持插件，这个现在编辑器应该会进行提示。
 
 2. 选择 Python 语言的解释器，在 User Settings 里设置 Python Path 为 `python3` 即可。
 
-也可以通过 `command + shift + p` 然后输入 `python` 选择 `Select Interpreter`，主要在 macOS 上由于共存了两个版本的 Python，所以需要指定解释器。选择 3.x 版本的解释器即可，可能存在多个选项，可以任意一个。这种方式是设置当前 workspace 的解释器，会在目录下新建 .vscode 配置，其他目录并不能共享。
+  也可以通过 `command + shift + p` 然后输入 `python` 选择 `Select Interpreter`，主要在 macOS 上由于共存了两个版本的 Python，所以需要指定解释器。选择 3.x 版本的解释器即可，可能存在多个选项，可以任意一个。这种方式是设置当前 workspace 的解释器，会在目录下新建 .vscode 配置，其他目录并不能共享。
 
 3. 配置语法检查 Pylint。 Python3 自带了 pip3，所以选择好解释器以后应该可以根据编辑器插件的提示进行安装，或者自己在终端手动安装 `pip3 install pylint`。
