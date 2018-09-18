@@ -29,7 +29,7 @@ ctrl + u
 ctrl + e
 
 # 光标移到行首
-ctrl + as
+ctrl + a
 
 # 删除光标之前的单词
 ctrl + w
