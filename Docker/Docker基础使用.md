@@ -72,6 +72,9 @@ docker container stop CONTAINER
 docker start [OPTIONS] CONTAINER [CONTAINER...]
 docker container start CONTAINER
 
+# 如果容器运行时设置了交互模式，重新启动停止的容器通常不会进入容器终端，这时可以用 attach 进入打开的容器
+docker attach CONTAINER
+
 # 删除所有停止运行的容器
 docker container prune
 docker container prune -f
@@ -84,5 +87,4 @@ docker rm $(docker ps -a -q)
 
 # 自动重启容器(以 非0 代码退出时自动尝试 5 次重启)
 docker run --restart=on-failure:5 IMAGE COMMAND
-
 ```
