@@ -88,3 +88,22 @@ docker rm $(docker ps -a -q)
 # 自动重启容器(以 非0 代码退出时自动尝试 5 次重启)
 docker run --restart=on-failure:5 IMAGE COMMAND
 ```
+
+## 查看容器的运行日志
+
+```bash
+# 列出到目前容器的日志
+docker logs CONTAINER
+
+# 列出容器的最近 10 条日志
+docker logs --tail 10 CONTAINER
+
+# 持续输出容器的日志(这会输出容器的所有日志然后开始跟踪)
+docker logs -f CONTAINER
+
+# 持续输出容器最近的一条日志，并附带上时间戳
+docker logs --tail 0 -ft test1
+```
+
+可以在 ubuntu 镜像上使用一个每秒循环输出 hello world 的小例子来尝试一下：
+`docker run -d --name test ubuntu /bin/sh -c "while true; echo hello world; sleep 1; done"`
