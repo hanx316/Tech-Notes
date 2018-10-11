@@ -72,8 +72,12 @@ docker container stop CONTAINER
 docker start [OPTIONS] CONTAINER [CONTAINER...]
 docker container start CONTAINER
 
-# 如果容器运行时设置了交互模式，重新启动停止的容器通常不会进入容器终端，这时可以用 attach 进入打开的容器
+# 如果容器以后台方式运行或者运行时设置了交互模式后停止运行而重新启动时通常不会进入容器终端
+# 这时可以用 attach 进入打开的容器，但是通过这种方式进入打开的容器，退出时会同时停止运行容器
 docker attach CONTAINER
+
+# 另一种方式是以在容器内新开进程的方式进入容器，其实就是在开启的容器内另外执行一些任务，例如：
+docker exec -ti ubuntu_container /bin/bash
 
 # 删除所有停止运行的容器
 docker container prune
