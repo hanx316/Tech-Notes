@@ -26,10 +26,10 @@ docker search [OPTIONS] TERM
 docker search -f=stars=30 ubuntu
 
 # 拉取镜像，默认拉取 tag 为 latest 的镜像
-docker pull <name>
+docker pull [REPOSITORY]
 
 # 拉取指定 tag 的镜像
-docker pull <name>:<tag>
+docker pull [REPOSITORY[:TAG]]
 
 # 列出所有本地镜像
 docker images
@@ -42,6 +42,9 @@ docker image ls -a
 # 列出所有容器id
 docker images -q
 docker image ls -q
+
+# 查看某类镜像信息
+docker images [REPOSITORY[:TAG]]
 
 # 删除镜像
 docker rmi <image-id> <image-id> ...
