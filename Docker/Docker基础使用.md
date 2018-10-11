@@ -1,5 +1,7 @@
 # Docker基础使用
 
+一些常用的 docker 终端操作笔记。
+
 ## 帮助命令查询
 
 Docker 命令提供了非常不错的帮助信息，方便查询学习和使用。
@@ -63,6 +65,9 @@ docker container ls
 # 查看所有容器
 docker ps -a
 docker container ls -a
+
+# 查看最后 x 个容器，不论是否运行
+docker ps -n x
 
 # 停止运行的容器，可以通过容器 id 访问到容器
 docker stop [OPTIONS] CONTAINER [CONTAINER...]
