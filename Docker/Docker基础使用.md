@@ -85,14 +85,16 @@ docker attach CONTAINER
 docker exec -ti ubuntu_container /bin/bash
 
 # 删除所有停止运行的容器
+docker rm $(docker ps -a -q)
 docker container prune
 docker container prune -f
 
 # 删除单个停止运行的容器
+docker rm CONTAINER
 docker container rm CONTAINER
 
-# 删除所有容器
-docker rm $(docker ps -a -q)
+# 强制删除所有容器，不论是否运行
+docker rm -f $(docker ps -a -q)
 
 # 自动重启容器(以 非0 代码退出时自动尝试 5 次重启)
 docker run --restart=on-failure:5 IMAGE COMMAND
