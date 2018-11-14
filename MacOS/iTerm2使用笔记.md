@@ -7,3 +7,8 @@
 - 切换到上/下/左/右面板: option + command + 上下左右方向键
 - 上一个面板: command + [
 - 下一个面板: command + ]
+
+### 标签页
+
+- 新建标签页: command + t
+- 关闭当前标签页: command + w
