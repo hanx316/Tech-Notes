@@ -13,8 +13,9 @@ brew install openssl
 # 已经安装过，直接升级
 brew upgrade openssl
 
-# 安装升级之后需要替换掉系统默认的，比较好的方式是不修改 ／usr/bin 下的自带版本，将 homebrew 安装的可执行文件软链到 /usr/local/bin 下
-# homebrew 安装的包通常在 /usr/local/Cellar 下
+# 安装升级之后需要替换掉系统默认的
+# 比较好的方式是不修改 ／usr/bin 下的自带版本，将 homebrew 安装的可执行文件软链到 /usr/local/bin 下
+# homebrew 安装的包通常在 /usr/local/Cellar 下，通过 list 命令确认安装包的路径
 brew list openssl
 ln -s <openssl_bin_path> /usr/local/bin/openssl
 ```
