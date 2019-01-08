@@ -24,6 +24,8 @@ var height = rect.bottom - rect.top
 ```
 getBoundingClientRect 方法返回一个包含 top, left, right, bottom 属性的对象，分别是元素盒子四边距离视口顶部和左侧的距离，值都是 Number 类型
 
+同样如果该元素设置了 `display: none` 那么每个值都是 0
+
 3. 通过计算样式直接获取
 
 ```js
@@ -36,4 +38,6 @@ var width = o.getPropertyValue('width')
 var height = o.getPropertyValue('height')
 ```
 
-需要特别说明的是，**获取到的值是像 '100px' 这样的 String 类型，如果要参与计算的话需要 parse 一下**
+需要特别说明的是，**获取到的值是像 `'100px'` 这样的 String 类型，如果要参与计算的话需要 parse 一下**
+
+如果该元素设置了 `display: none` 那么获取的值是 `'auto'`
