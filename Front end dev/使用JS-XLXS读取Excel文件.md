@@ -8,7 +8,7 @@
 
 主要是读取文件的处理，用上传控件提交后，通过 FileReader 读取为二进制字符串，再由 XLSX 提供的二进制读取方式就可以拿到文件的数据。
 
-假定第一行的每一列是一个字段，之后每一行是一个对象的话（类似 MySQL），可以直接调用 XLSX 提供的 `utils.sheet_to_json` 工具方法。
+假定第一行的每一列是一个字段，之后每一行是一个对象的话（类似 MySQL 表结构），可以直接调用 XLSX 提供的 `utils.sheet_to_json` 工具方法。
 
 ```js
 var input = document.querySelector('#input')
