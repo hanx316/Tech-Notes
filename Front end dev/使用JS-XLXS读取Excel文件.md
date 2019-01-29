@@ -27,6 +27,12 @@ input.addEventListener('change', e => {
 
 这样只要拿到对象化之后的表格数据，剩下的无非就是 json 结构转换了。
 
+参考文章：
+
+[Node读写Excel文件探究实践](https://aotu.io/notes/2016/04/07/node-excel/index.html)
+
+[在 Node.js 中利用 js-xlsx 处理 Excel 文件](https://scarletsky.github.io/2016/01/30/nodejs-process-excel/)
+
 未完待续...
 
 
