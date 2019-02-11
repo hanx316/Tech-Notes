@@ -19,4 +19,11 @@ git push origin --tags
 
 # 删除远程仓库的标签
 git push origin :refs/tags/<tagname>
+
+# 查看当前分支最新提交的 tag（基于哪个 tag 之后的提交）
+git describe
+git describe --tags
+
+# 查看当前仓库的最新 tag
+git describe --tags `git rev-list --tags --max-count=1`
 ```
