@@ -23,7 +23,7 @@ mkdir db
 # 启动容器
 docker run -d --name mongo3.4 -p 27017:27017 -v $PWD/db:/data/db mongo:3.4
 
-# 进入 mongo shell
+# 进入 mongo shell 其中 mongo 是打开 mongo shell 的命令
 docker exec -it mongo3.4 mongo
 
 # 也可以通过设置 host 参数为主机 ip 进入 mongo shell，但是会新开启一个容器
