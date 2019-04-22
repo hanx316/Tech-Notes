@@ -1,10 +1,12 @@
-# Python环境安装
+# Python 环境安装
 
 对于 Windows／macOS，Python 语言环境安装非常简单。可以直接在 [Python 官网](https://www.python.org/)进入 **Downloads** 下载对应系统的一键安装包进行安装。语言版本选择 Python3.x。
 
 另外，Python3.5 以上版本不支持 Windows Xp 系统。
 
 Windows 系统安装时注意勾选上添加 Python 到环境变量，其他都按照默认值设定即可，确定 pip 选项已经勾上。
+
+macOS 升级 Python 3.x 的小版本可以直接用新的安装包覆盖安装。
 
 ## Python Shell 与 IDLE
 
