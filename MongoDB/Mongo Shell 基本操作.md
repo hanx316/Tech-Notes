@@ -46,11 +46,11 @@ db.<collection>.save(<document> or [<document>, ...])
 
 1. 返回结果对象格式不一样
 
-`insert` 无论成功失败都不会抛错；插入单条文档，返回一个 `WriteResult` 对象，显示插入了多少条数据，如果发生错误会包含 `writeError` 字段；插入多条文档，返回一个 `BulkWriteResult` 对象，如果发生错误会包含 `writeErrors` 字段
+  - `insert` 无论成功失败都不会抛错；插入单条文档，返回一个 `WriteResult` 对象，显示插入了多少条数据，如果发生错误会包含 `writeError` 字段；插入多条文档，返回一个 `BulkWriteResult` 对象，如果发生错误会包含 `writeErrors` 字段
 
-`insertOne` 和 `insertMany` 插入成功之后会返回一个普通对象包含插入的文档主键以及写入的安全级别
+  - `insertOne` 和 `insertMany` 插入成功之后会返回一个普通对象包含插入的文档主键以及写入的安全级别
 
-`insertOne` 插入失败会抛出 `WriteError` 错误， `insertMany` 插入失败抛出 `BulkWriteError` 错误
+  - `insertOne` 插入失败会抛出 `WriteError` 错误， `insertMany` 插入失败抛出 `BulkWriteError` 错误
 
 2. `insertOne` 和 `inserMany` 不支持 `db.<collection>.explain()` 命令
 
