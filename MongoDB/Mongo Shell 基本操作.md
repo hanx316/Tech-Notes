@@ -28,8 +28,6 @@ exit
 
 在输入命令时没有闭合括号前可以任意换行以便书写。
 
-，单条插入失败时会抛出 `WriteError` 错误，多条插入失败时抛出 `BulkWriteError` 错误。
-
 ```bash
 # 插入单条文档，如果集合不存在会自动创建
 db.<collection>.insertOne(<document>)
