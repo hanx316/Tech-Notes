@@ -74,3 +74,29 @@ db.users.insertMany([
   },
 ])
 ```
+
+### 查询数据
+
+主要使用 `db.<collection>.find(<query>, <projection>)` 命令，支持匹配查询与查询操作符号。
+
+<query> 定义读取操作时筛选文档的条件，<projection> 定义对读取结果进行的投射。
+
+find 命令返回文档查询的游标，游标可以进行进一步迭代和操作。
+
+投射：控制查询返回的字段，节约系统资源，让查询更高效和灵活。
+
+```bash
+# 返回全部文档
+db.restaurants.find()
+db.restaurants.find().pretty()
+
+# 匹配查询
+# 单条件匹配
+db.restaurants.find({ name: 'Time Out Lounge' })
+# 多条键匹配
+db.restaurants.find({ borough: 'Queens', cuisine: 'Armenian' })
+# 嵌套对象匹配
+db.restaurants.find({ cuisine: 'American ', 'address.street': 'Broadway' })
+# 嵌套数组匹配（只要数组中包含满足条件的元素）
+db.restaurants.find({ 'grades.grade': 'B' })
+```
