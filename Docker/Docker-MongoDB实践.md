@@ -20,7 +20,7 @@ pwd
 mkdir mongodb && cd mongodb
 mkdir db
 
-# 启动容器
+# 启动容器，将当前目录下的 /db 挂载到容器 /data/db
 docker run -d --name mongo3.4 -p 27017:27017 -v $PWD/db:/data/db mongo:3.4
 
 # 进入 mongo shell 其中 mongo 是打开 mongo shell 的命令
@@ -31,3 +31,15 @@ docker run -it mongo:3.4 mongo --host [主机 ip]
 ```
 
 启动 mongo 服务容器之后，Robo 3T 之类的可视化工具就可以通过连接 `localhost` 连接数据库了。
+
+## 导入数据到容器
+
+首先将需要导入的数据文件放置在挂载的目录下以便容器能够访问 `$PWD/db`
+
+```bash
+# 启动容器的 bash 终端
+docker exec -it mongo3.4 /bin/bash
+
+# 通过 MongoDB 的导入命令导入数据（将数据文件 dataset.json 导入到 test 库的 dataset 集合）
+mongoimport --db test --collection dataset --drop --file /data/db/dataset.json
+```
