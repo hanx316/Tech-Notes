@@ -4,7 +4,7 @@ Docker 安装 MongoDB 环境的实践笔记。
 
 ## 下载镜像
 
-这里使用比较常用的 mongo3.4 版本，具体信息可以查看 [mongo 的 Docker 官方镜像地址](https://hub.docker.com/_/mongo/)
+这里使用比较常用的 mongo3.4 版本，具体信息和使用方式可以查看 [mongo 的 Docker 官方镜像地址](https://hub.docker.com/_/mongo/)
 
 ```bash
 docker pull mongo:3.4
@@ -38,7 +38,7 @@ docker run -it mongo:3.4 mongo --host [主机 ip]
 
 ```bash
 # 启动容器的 bash 终端
-docker exec -it mongo3.4 /bin/bash
+docker exec -it mongo3.4 bash
 
 # 通过 MongoDB 的导入命令导入数据（将数据文件 dataset.json 导入到 test 库的 dataset 集合）
 mongoimport --db test --collection dataset --drop --file /data/db/dataset.json
