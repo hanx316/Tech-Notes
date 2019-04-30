@@ -26,7 +26,7 @@ git config --global core.excludesfile ~/.gitignore_global
 git config --list(-l)
 
 # 查看全局配置信息
-git config -l --global
+git config --global -l
 
 # 设置用户名
 git config --global user.name hanx
@@ -39,6 +39,9 @@ git config --global core.autocrlf input
 
 # Git 提交默认对文件名的大小写不敏感，如果文件引用对大小写敏感的话，可以开启该项
 git config core.ignorecase false
+
+# 删除配置
+git config (--global) --unset user.name
 ```
 
 Windows 系统下的换行默认是 CRLF，Linux 和 Mac 下的换行的则是LF，这是一个坑，比如 shell 脚本在 Windows 下保存为 CRLF 换行的话，执行起来就会报错，而光从代码上看是完全正确的
