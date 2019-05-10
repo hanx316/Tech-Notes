@@ -112,7 +112,7 @@ db.restaurants.find({ 'grades.grade': 'B' })
 $<operator> 比较操作符
 <value> 比较的值
 
-比较操作符：
+#### 比较操作符
 
 - $eq - equal 匹配字段值相等的文档
 
@@ -148,7 +148,7 @@ db.restaurants.find({ borough: { $in: ['Manhattan', 'Queens'] } })
 db.restaurants.find({ borough: { $nin: ['Manhattan', 'Queens'] } })
 ```
 
-逻辑操作符：
+#### 逻辑操作符
 
 - $not - 匹配筛选条件不成立的文档 `{ <field>: { $not: { <expression> } } }`
 
@@ -214,7 +214,7 @@ db.restaurants.find({
 db.restaurants.find({ borough: { $nin: ['Manhattan', 'Queens'] } })
 ```
 
-字段操作符：
+#### 字段操作符
 
 - $exists - 匹配包含查询字段的文档 `{ <field>: { $exists: <boolean> } }` [手册地址](https://docs.mongodb.com/manual/reference/operator/query/exists/)
 
