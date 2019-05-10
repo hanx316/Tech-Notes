@@ -241,7 +241,7 @@ db.restaurant.find({ name: { $type: 'null' } })
 - $elemMatch - 选出数组中满足操作符指定条件的所有文档 `{ <field>: { $elemMatch: { <query>, <query> ... } } }` [手册地址](https://docs.mongodb.com/manual/reference/operator/query/elemMatch/)
 
 ```bash
-db.restaurants.find({ tags: { $all: ['', ''] } })
+db.inventory.find({ tags: { $all: [ 'school', 'book' ] } })
 
 db.inventory.find({ qty: { $elemMatch: { size: 'M', color: 'blue' } } })
 ```
