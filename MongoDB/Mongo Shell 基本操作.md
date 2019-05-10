@@ -231,3 +231,17 @@ db.restaurant.find({ name: { $type: 'null' } })
 ```
 
 也可以使用 BSON 类型序号查询，具体可以参考手册，但是可读性不好，不推荐。
+
+#### 数组操作符
+
+针对文档字段值是数组的筛选
+
+- $all - 选出数组中包含操作符指定元素的所有文档 `{ <field>: { $all: [ <value>, <value> ... ] } }` value 需要完全相等 [手册地址](https://docs.mongodb.com/manual/reference/operator/query/all/)
+
+- $elemMatch - 选出数组中满足操作符指定条件的所有文档 `{ <field>: { $elemMatch: { <query>, <query> ... } } }` [手册地址](https://docs.mongodb.com/manual/reference/operator/query/elemMatch/)
+
+```bash
+db.restaurants.find({ tags: { $all: ['', ''] } })
+
+db.inventory.find({ qty: { $elemMatch: { size: 'M', color: 'blue' } } })
+```
