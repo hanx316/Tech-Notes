@@ -249,3 +249,12 @@ db.inventory.find({ qty: { $elemMatch: { size: 'M', color: 'blue' } } })
 
 db.inventory.find({ tags: { $size: 2 } })
 ```
+
+#### 运算操作符
+
+- $regex - 匹配满足正则表达式的文档 `{ <field>: { $regex: /pattern/, $options: <options>  }` 或者 `{ $regex: /pattern/<options> }`, 配合诸如 $in 使用时，可以直接 `{ <field>: /pattern/<options> }` [查看手册](https://docs.mongodb.com/manual/reference/operator/query/regex/)
+
+```js
+db.inventory.find({ code: { $in: [/^A/i, /^X/i] } })
+db.inventory.find({ code: { $regex: /^A/, $options: 'i' } })
+```
