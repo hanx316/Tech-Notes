@@ -258,3 +258,61 @@ db.inventory.find({ tags: { $size: 2 } })
 db.inventory.find({ code: { $in: [/^A/i, /^X/i] } })
 db.inventory.find({ code: { $regex: /^A/, $options: 'i' } })
 ```
+
+### 文档游标操作
+
+通过 find 命令获取到文档游标之后，默认 10 分钟之后或者遍历完游标之后，游标就会进行关闭
+
+可以使用 `noCursorTimeout()` 禁止游标在超时后关闭，但是遍历完之后游标仍然会关闭
+
+```js
+var cursor = db.inventory.find().noCursorTimeout()
+cursor.close() // 主动关闭游标
+```
+
+#### 游标函数
+
+- cursor.hasNext()
+
+- cursor.next()
+
+```js
+var cursor = db.inventory.find()
+while(cursor.hasNext()) {
+  printjson(cursor.next())
+}
+```
+
+- cursor.forEach(<function>)
+
+```js
+var cursor = db.inventory.find()
+cursor.forEach(printjson)
+```
+
+- cursor.limit(<number>) 从游标文档集合返回限定数量的结果, `number === 0` 时，返回全部游标集合文档
+
+- cursor.skip(<offset>) 跳过游标文档集合中指定数量的文档
+
+```js
+db.inventory.find().limit(1)
+db.inventory.find().skip(1)
+```
+
+- cursor.count(<applySkipLimit>) 默认情况下 `applySkipLimit === false`, `cursor.count()` 不考虑 `cursor.limit()` 和 `cursor.skip()` 的效果，固定返回全部数量
+
+```js
+db.inventory.find().limit(1).count()
+db.inventory.find().limit(1).count(true)
+```
+
+find 命令不传入筛选条件时，`cursor.count()` 并不会遍历文档，而是会从集合的元数据 Metadata 中取得结果，当数据库以分布式结构存储时，元数据中的文档数量未必准确，应当尽量避免无筛选条件的 count 操作，可以考虑聚合管道来计算数量
+
+- cursor.sort(<document>) `<document>` 定义了排序的方式 `{ <field>: <ordering> }` 1 表示由小到大正向排序，-1 表示从大到小逆向排序
+
+```js
+db.inventory.find().sort({ code: 1 })
+db.inventory.find().sort({ code: -1 })
+```
+
+当 skip, limit, sort 结合使用时，skip 永远在 limit 之前执行，sort 永远在 skip 和 limit 之前执行
