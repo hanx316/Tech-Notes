@@ -240,8 +240,12 @@ db.restaurant.find({ name: { $type: 'null' } })
 
 - $elemMatch - 选出数组中满足操作符指定条件的所有文档 `{ <field>: { $elemMatch: { <query>, <query> ... } } }` [手册地址](https://docs.mongodb.com/manual/reference/operator/query/elemMatch/)
 
+- $size - 筛选出数组长度满足条件的所有文档 `{ <field>: { $size: <value> } }` [手册地址](https://docs.mongodb.com/manual/reference/operator/query/size/)
+
 ```bash
 db.inventory.find({ tags: { $all: [ 'school', 'book' ] } })
 
 db.inventory.find({ qty: { $elemMatch: { size: 'M', color: 'blue' } } })
+
+db.inventory.find({ tags: { $size: 2 } })
 ```
