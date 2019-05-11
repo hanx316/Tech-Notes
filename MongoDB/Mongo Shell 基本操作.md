@@ -96,7 +96,7 @@ db.restaurants.find().pretty()
 ```bash
 # 单条件匹配
 db.restaurants.find({ name: 'Time Out Lounge' })
-# 多条键匹配
+# 多条件匹配
 db.restaurants.find({ borough: 'Queens', cuisine: 'Armenian ' })
 # 嵌套对象匹配
 db.restaurants.find({ cuisine: 'American ', 'address.street': 'Broadway' })
