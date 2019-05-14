@@ -40,7 +40,7 @@
 
 其实就在插件编写文档的应用层使用方案有提到[动态创建实例的方法](https://eggjs.app/zh-cn/advanced/plugin.html#%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B)，虽然文档是 mysql 的插件，但其中核心的 [addSingleton](https://github.com/eggjs/egg/blob/2.22.2/lib/egg.js#L458) [createInstance](https://github.com/eggjs/egg/blob/2.22.2/lib/core/singleton.js#L82) [createInstanceAsync](https://github.com/eggjs/egg/blob/2.22.2/lib/core/singleton.js#L91) 这些方法都是框架提供的，看到这里，我们的方案也就调整为**不让 egg-mongoose 初始化连接数据库，而是异步获取到配置之后我们动态创建连接服务的实例**，而正好除了 `configWillLoad` 其他钩子函数都支持异步调用。
 
-不让 egg-mongoose 初始化连接数据库我们不传入任何相关配置即可，插件内部做了相应的容错处理。需要注意的是我们还得关掉插件对 model 的自动加载，这一点插件的文档并没有说明。
+不让 egg-mongoose 初始化连接数据库我们不传入任何相关配置即可，singleton 的 `init` 方法对没有传入 client 或者 clients 的配置不会创建实例。需要注意的是我们还得关掉插件对 model 的自动加载，这一点插件的文档并没有说明。
 
 ```js
 config.mongoose = {
