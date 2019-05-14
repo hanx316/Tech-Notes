@@ -21,6 +21,8 @@ yum -y install wget
 wget -N –no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 ```
 
-#### 一些可以关注的 js 代码库：
+#### 关注的 js 模块：
 
-- [components](https://github.com/component)
+- [components](https://github.com/component) 看到 TJ 在成员里面，大概就是国外大神们搞的一个模块集
+
+- [node-modules](https://github.com/node-modules) 阿里自用的 node 模块集
