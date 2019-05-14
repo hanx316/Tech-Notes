@@ -21,6 +21,6 @@ yum -y install wget
 wget -N –no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 ```
 
-#### 一些关注的但又不 star 的代码库：
+#### 一些可以关注的 js 代码库：
 
 - [components](https://github.com/component)
