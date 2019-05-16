@@ -25,6 +25,9 @@ git describe
 git describe --tags
 git describe --abbrev=0
 
+# checkout 当前分支最新 tag
+git checkout $(git describe --abbrev=0)
+
 # 查看当前仓库的最新 tag
 git describe --tags `git rev-list --tags --max-count=1`
 ```
