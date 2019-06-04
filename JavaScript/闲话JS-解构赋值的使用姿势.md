@@ -82,5 +82,5 @@ const { someMethod } = require('some-module')
 
 ```js
 const data = { foo: 'foo' }
-let { no: bar }
+let { no: bar } = data
 ```
