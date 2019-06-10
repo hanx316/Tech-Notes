@@ -14,6 +14,8 @@
 
 VirtualBox 提供了应用程序可以通过可视化界面创建和管理虚拟机，但是这些操作我们都通过 Vagrant 来完成， VirtualBox 仅提供背后的支持。
 
+macOS 10.13 之后由于安全策略可能会导致安装失败，删除已安装的内容之后，在系统偏好设置的安全性与隐私里面点一下允许然后重新安装即可。
+
 ## 创建和管理 Centos 虚拟机
 
 关于 vagrant 的使用可以查阅 [Vagrant 官方文档](https://www.vagrantup.com/docs/) 以及 `vagrant --help` 命令。
