@@ -65,7 +65,7 @@ minikube delete
 
 minikube 启动后会自动配置好 kubectl 的 config, 可以通过 kubectl 访问集群。
 
-参考：
+## 参考：
 
 - [Minikube - Kubernetes本地实验环境](https://yq.aliyun.com/articles/221687?spm=a2c4e.11153940.blogcont221687.154.7dd54cec1yQlPe&p)
 
