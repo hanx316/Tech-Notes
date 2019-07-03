@@ -109,18 +109,18 @@ npm install(i) <name> -g
 npm i <name>
 
 # 删除包
-npm uninstall <name>
+npm uninstall(un) <name>
 
 # 全局删除包
-npm uninstall <name> -g
+npm un <name> -g
 
 # 安装固定版本的包
 npm i <name@version>
 
-# 写入安装信息到package.json的dependencies
+# 写入安装信息到 package.json 的 dependencies
 npm i <name> --save(-S)
 
-# 写入安装信息到package.json的devdependencies
+# 写入安装信息到 package.json 的 devdependencies
 npm i <name> --save-dev(-D)
 ```
 
