@@ -8,7 +8,7 @@
 
 ## Dockerfile 指令
 
-关于如何使用 Dockerfile 来定制镜像可以查看 [Dockerfile 官方文档](https://docs.docker.com/engine/reference/builder/)，下面是一些常用指令使用说明。
+关于如何使用 Dockerfile 来定制镜像可以查看 [Dockerfile 官方文档](https://docs.docker.com/engine/reference/builder/)，下面是一些常用指令的使用说明。
 
 ### FROM
 
@@ -20,15 +20,15 @@ FROM 指令指定了定制镜像使用的基础镜像。
 FROM node:8-alpine
 ```
 
-基础镜像往往用来作为应用镜像的运行环境。可以在 [Docker Hub](https://hub.docker.com/) 上寻找 Docker 官方或者各种基础服务官方制作的基础镜像。
+基础镜像往往用来作为应用服务的运行环境镜像。可以在 [Docker Hub](https://hub.docker.com/) 上寻找 Docker 官方或者各种基础服务官方制作的基础镜像。
 
 Docker 中还有一个叫做 `scratch` 的虚拟镜像，`FROM scratch` 表示不以任何镜像为基础来定制。
 
-一个 Dockerfile 文件必须以 FROM 指令开头（仅 ARG 指令可以出现在 FROM 之前）
+一个 Dockerfile 文件必须以 FROM 指令开头（仅 ARG 指令可以出现在 FROM 之前）。
 
 ### COPY
 
-COPY 指令用于将构建镜像上下文目录下文件复制到镜像的目标路径下。
+COPY 指令用于将构建镜像的上下文目录下的文件复制到镜像的目标路径下。
 
 示例：
 
@@ -47,6 +47,8 @@ COPY app.js package.json app/
 
 # 将上下文根路径下的 config 目录复制到镜像工作目录的 app 目录下
 COPY config app/config
+# 或者
+COPY config app/config/
 ```
 
 COPY 指令的合法源路径必须在构建镜像的上下文目录下，源路径支持 GO 语言的 [filepath.Match](https://golang.org/pkg/path/filepath/#Match) 匹配规则。
