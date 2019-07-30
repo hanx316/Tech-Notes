@@ -73,5 +73,29 @@ WORKDIR /app
 
 WORKDIR 可以多次执行，之后指定的如果是相对路径，会基于前面的绝对路径生成。
 
+### RUN
+
+RUN 指令顾名思义执行命令。
+
+比较常用的写法是直接跟 Shell 格式的命令
+
+示例
+
+```
+RUN touch hello.txt && \
+    echo 'hello' > hello.txt
+```
+
+按照一般理解，上面也是可以写成：
+
+```
+RUN touch hello.txt
+RUN echo 'hello' > hello.txt
+```
+
+但是由于 Dockerfile 中每一条指令都会创建一层新的存储层，所以在使用 RUN 指令时往往不会采用这样出现多条 RUN 指令的写法，因为这样会使每一条 RUN 指令都创建一层，导致镜像臃肿。
+
+所以在使用 RUN 指令时，需要注意尽可能让所有命令在同一层执行，并且一些操作完成后尽可能删除不必要的文件。
+
 
 to be continue...
