@@ -24,7 +24,11 @@ Mac 上安装和使用 Docker 非常简单，参考官方文档 [Install Docker 
 
 ## 设置国内镜像源
 
-由于万恶的某墙，拉取镜像速度会非常缓慢，可以设置国内的镜像源地址。我通常使用 Docker 官方的中国镜像 https://registry.docker-cn.com 。
+由于万恶的某墙，拉取镜像速度会非常缓慢，可以设置国内的镜像源地址。
+
+参考[镜像加速器](https://yeasy.gitbooks.io/docker_practice/content/install/mirror.html)
+
+目前可以配置 Azure 中国镜像 https://dockerhub.azk8s.cn 或者 七牛云加速器 https://reg-mirror.qiniu.com
 
 Docker for Mac 启动后可以在桌面右上角图标打开 Preferences，然后打开 Daemon，在 Registry Mirrors 设置即可。
 
@@ -32,7 +36,10 @@ Linux 安装的 Docker 可以在 `/etc/docker/daemon.json` 文件中配置
 
 ```json
 {
-  "registry-mirrors": ["https://registry.docker-cn.com"]
+  "registry-mirrors": [
+    "https://dockerhub.azk8s.cn",
+    "https://reg-mirror.qiniu.com"
+  ]
 }
 ```
 
