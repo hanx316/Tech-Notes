@@ -27,7 +27,7 @@ mkdir mysql && cd mysql
 mkdir db
 
 # 启动容器
-docker run -d --name mysql8 -p 3306:3306 -v $PWD/db:/var/lib/mysql -e e=<your_root_password> mysql:8
+docker run -d --name mysql8 -p 3306:3306 -v $PWD/db:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=<your_root_password> mysql:8
 
 # 以 root 用户进入 MySQL shell
 docker exec -it mysql8 sh -c 'exec mysql -uroot -p"<your_root_password>"'
