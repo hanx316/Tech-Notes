@@ -32,4 +32,4 @@ zh_CN 目录下只有一个 LC_MESSAGES，看来 git 只配置了 message 相关
 
 更详细考究的内容可以参考 [GNU gettext utilities](http://www.gnu.org/software/gettext/manual/gettext.html#Locale-Environment-Variables)
 
-如果升级了但是又没有显示中文，看一下安装目录确认有语言文件的化，添加 `alias git="LC_MESSAGES=zh_CN git"` 应该就会显示中文吧。
+如果升级了但是又没有显示中文，看一下安装目录确认有语言文件的话，添加 `alias git="LC_MESSAGES=zh_CN git"` 应该就会显示中文吧。
