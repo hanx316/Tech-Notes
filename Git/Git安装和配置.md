@@ -8,11 +8,11 @@ Windows 系统安装 Git 可以直接用这个[ Git for Windows ](https://git-fo
 
 还有一个[乌龟 Git(TortoiseGit) ](https://tortoisegit.org/)可视化操作软件，虽然日常都用命令行，但是也可以装上，搭配 **Beyond Compare** 在比对文件版本差异时很方便
 
-### Macos 安装 Git
+### MacOS 安装 Git
 
-Mac上推荐先安装 `homebrew`，然后 `brew install git` 即可，git会被安装到 `/usr/local/cellar` 目录下
+Mac 上推荐先安装 `homebrew`，然后 `brew install git` 即可，git会被安装到 `/usr/local/cellar` 目录下
 
-mac下会自动生成一个 `.DS_Store` 的文件，用于描述文件的一些位置信息之类的，可以选择在 Mac 下设置不生成。如果没有设置的话，这个文件也不用提交到 Git，需要 Git 设置全局忽略该文件
+Mac 下会自动生成一个 `.DS_Store` 的文件，用于描述文件的一些位置信息之类的，可以选择在 Mac 下设置不生成。如果没有设置的话，这个文件也不用提交到 Git，需要 Git 设置全局忽略该文件
 
 ```bash
 echo .DS_Store >> ~/.gitignore_global
