@@ -17,7 +17,7 @@ kubectl 是官方提供的用于访问 k8s 集群的命令行工具，平时个�
 kubectl config view
 ```
 
-kubectl 的配置信息存在 `$HOME/.kube` 目录下（MacOS），将 public access 信息写入 config 即可。
+kubectl 的配置信息存在 `$HOME/.kube` 目录下（MacOS），将访问配置写入 config 即可。
 
 也支持写入多个集群的配置信息，参看 yaml 配置中的 `clusters` `contexts` 和 `users`。
 
@@ -51,7 +51,7 @@ kubectl get po -n NAMESPACE
 
 主要是查看 pod 的日志信息时的一些操作。
 
-```
+```bash
 # dump 某个 pod 最近 100 行日志，然后持续输出日志，不加 tail 会先 dump 所有日志出来
 kubectl logs -f POD_NAME --tail 100 -n NAMESPACE
 
@@ -60,4 +60,17 @@ kubectl logs POD_NAME --tail 500 -n NAMESPACE > logs
 
 # dump 某个服务的所有 pod 的最近 500 行日志到一个临时文件(logs) APP_NAME 是发布服务时 yaml 中配置的 label
 kubectl logs -l app=APP_NAME -n NAMESPACE --tail 500 > logs
+```
+
+## 进入 pod 的容器
+
+前提是运行的容器支持 `sh` 或者 `/bin/bash`，一般都有。
+
+```bash
+# pod 只有单个容器
+kubectl exec -it POD_NAME -n NAMESPACE -- sh
+kubectl exec -it POD_NAME -n NAMESPACE -- /bin/bash
+
+# pod 有多个容器
+kubectl exec -it POD_NAME -c CONTAINER_NAME -n NAMESPACE -- sh
 ```
