@@ -19,7 +19,7 @@ kubectl config view
 
 kubectl 的配置信息存在 `$HOME/.kube` 目录下（MacOS），将 public access 信息写入 config 即可。
 
-也支持写入多个集群的配置信息，参看 yaml 配置中的 `clusters` `contexts` 和 `users`，然后使用 ``
+也支持写入多个集群的配置信息，参看 yaml 配置中的 `clusters` `contexts` 和 `users`。
 
 ```bash
 # 切换 context
