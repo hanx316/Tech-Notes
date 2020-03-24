@@ -64,7 +64,11 @@ kubectl logs -f POD_NAME --tail 100 -n NAMESPACE
 kubectl logs POD_NAME --tail 500 -n NAMESPACE > logs
 
 # dump 某个服务的所有 pod 的最近 500 行日志到一个临时文件(logs) APP_NAME 是发布服务时 yaml 中配置的 label
+# 目前使用中发现拉取所有 pod 的日志时必须指定 tail 否则默认每个 pod 取十行；并且 tail 是针对单个 pod 而言，比如有 4 个 pod 那么实际取得的日志是 2000 行
 kubectl logs -l app=APP_NAME -n NAMESPACE --tail 500 > logs
+
+# 取某个 pod 最近一小时的日志
+kubectl logs POD_NAME -n web --since 1h > logs
 ```
 
 ## 进入 pod 的容器
