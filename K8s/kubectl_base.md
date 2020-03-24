@@ -21,8 +21,13 @@ kubectl 的配置信息存在 `$HOME/.kube` 目录下（MacOS），将访问配�
 
 也支持写入多个集群的配置信息，参看 yaml 配置中的 `clusters` `contexts` 和 `users`。
 
+其中各项配置的 `name` 字段可以根据需要任意修改，保持本地可以正确关联，不重复即可。
+
 ```bash
-# 切换 context
+# 查看上下文
+kubectl config get-contexts
+
+# 切换上下文
 kubectl config use-context CONTEXT_NAME
 kubectl config use CONTEXT_NAME
 ```
