@@ -37,4 +37,8 @@ git checkout $(git describe --tags --abbrev=0)
 
 # checkout 当前仓库最新 tag
 git checkout $(git rev-list --tags --max-count=1)
+
+# 返回所有标签以及对应的创建日期
+git tag --format "%(refname:short) %(creatordate)" > tags
+git tag --format "%(refname:short) %(creatordate:short)" > tags
 ```
