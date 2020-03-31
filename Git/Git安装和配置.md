@@ -28,10 +28,10 @@ git config --list(-l)
 # 查看全局配置信息
 git config --global -l
 
-# 设置用户名
+# 设置全局用户名
 git config --global user.name hanx
 
-# 设置邮箱
+# 设置全局邮箱
 git config --global user.email hanx@mail.com
 
 # 设置提交 git 时自动将换行符转化为 lf

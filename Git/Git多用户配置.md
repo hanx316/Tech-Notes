@@ -50,3 +50,23 @@ git config user.email xxx
 ```
 
 这样就实现了不同项目使用不同的 ssh-key 和账户。唯一麻烦一点就是没有了全局的设置，需要针对每个项目都设置一遍 user 信息。
+
+## 不同项目对应不同 github 账户
+
+假设现在有两个 github 账户 A 和 B，需要分别用不同的 ssh-key 去连接对应的仓库，其实也可以通过配置 config 实现。
+
+```
+Host git.a
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_a
+
+Host github.com
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_b
+```
+
+以上配置， HostName 保持一致，但是 Host 可以修改用于匹配，Host 的具体修改规则可以参考[这份文档](http://man.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man5/ssh_config.5?query=ssh_config%26arch=i386#PATTERNS)。
+
+另外修改了 Host 之后，在项目的 remote url 设置中也需要设置 Host 部分和 config 一致以便成功匹配。 如 `git remote set-url origin git.a@xxxx`。
