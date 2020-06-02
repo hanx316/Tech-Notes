@@ -20,11 +20,11 @@
 document.querySelector('article').parentNode.innerHTML
 ```
 
-但是这种方法本身有限制：**父节点内不能有其他无关的内容**。
+但是这种方法本身有限制：**父节点内不能有其他无关的内容**。比如注释或者不希望被选取的兄弟节点。
 
 #### 方法二：通过 XMLSerializer 获取
 
-第一种方法其实比较绕，其实可以查一下有没有从 DOM 节点本身入手的方法，下面就是本文重点介绍的方法了。
+第一种方法比较绕，算是一种实现思路。其实可以查一下有没有从 DOM 节点本身入手的方法，下面就是本文重点介绍的方法了。XMLSerializer API。
 
 ```js
 let xmls = new XMLSerializer()
@@ -33,3 +33,8 @@ let html = xmls.serializeToString(svg)
 ```
 
 这个 API 兼容性也没什么太大问题，到 IE9。
+
+相关资料：
+
+[MDN 上 XMLSerializer 文档](https://developer.mozilla.org/en-US/docs/Web/API/XMLSerializer)
+[caniuse 兼容性](https://caniuse.com/#search=XMLSerializer)
