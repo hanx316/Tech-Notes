@@ -1,6 +1,6 @@
 # Docker基础使用
 
-一些常用的 docker 终端操作笔记。
+一些常用的 docker 终端操作命令笔记。
 
 ## 帮助命令查询
 
@@ -57,7 +57,7 @@ docker image rm $(docker images -q)
 # 使用镜像新建容器并启动
 docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
-# 使用 node 镜像执行命令，更多使用示例可以参考 Docker-MongoDB实战
+# 使用 node 镜像执行命令，更多使用示例可以参考 Docker-MongoDB 实践
 docker run node:8.11.4-alpine node -v
 docker run node:8.11.4-alpine /bin/echo 'Hello world'
 
@@ -126,10 +126,12 @@ docker logs --tail 0 -ft test1
 ## 查看容器状态
 
 ```bash
+# 查看容器基本信息(包括状态，创建时的设置，启动配置等非常全面的信息)
+docker inspect CONTAINER
+
 # 查看容器内运行的进程
 docker top CONTAINER
 
-# 查看容器统计信息
+# 查看容器统计信息(持续监听输出)
 docker stats CONTAINER
-
 ```
