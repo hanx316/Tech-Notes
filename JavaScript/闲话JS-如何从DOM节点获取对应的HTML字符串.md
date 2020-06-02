@@ -37,4 +37,5 @@ let html = xmls.serializeToString(svg)
 相关资料：
 
 [MDN 上 XMLSerializer 文档](https://developer.mozilla.org/en-US/docs/Web/API/XMLSerializer)
+
 [caniuse 兼容性](https://caniuse.com/#search=XMLSerializer)
