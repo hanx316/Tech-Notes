@@ -47,3 +47,29 @@ vagrant halt
 # 删除创建的虚拟机
 vagrant destroy
 ```
+
+## 启动报错处理
+
+2020.06.02 更新。
+
+有一段时间没有用 vagrant 了，今天启动虚拟机突然发现报错无法启动。错误如下
+
+```
+There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["startvm", "～～～ 马赛克 ～～～", "--type", "headless"]
+
+Stderr: VBoxManage: error: The virtual machine 'centos7_default_1591109834119_4986' has terminated unexpectedly during startup with exit code 1 (0x1)
+VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component MachineWrap, interface IMachine
+```
+
+尝试在 VirtualBox 手动启动虚拟机也失败，提示没有 linux 内核之类的巴拉巴拉。推测可能由于系统更新或者关机重启之类的导致 VirtualBox 出了问题。
+
+在 stackoverflow 上找到一个[答案](https://stackoverflow.com/questions/54286789/mac-there-was-an-error-while-executing-vboxmanage-a-cli-used-by-vagrant)，成功解决。
+
+```bash
+sudo "/Library/Application\ Support/VirtualBox/LaunchDaemons/VirtualBoxStartup.sh" restart
+```
+
+看上去应该就是重启一下 VirtualBox 的一些守护进程吧。
