@@ -40,6 +40,19 @@ docker run -it mongo:3.4 mongo --host [主机 ip]
 # 启动容器的 bash 终端
 docker exec -it mongo3.4 bash
 
-# 通过 MongoDB 的导入命令导入数据（将数据文件 dataset.json 导入到 test 库的 dataset 集合）
-mongoimport --db test --collection dataset --drop --file /data/db/dataset.json
+# 通过 mongoimport 导入
+mongoimport --db DB --collection COLLECTION --drop --file /data/db/dataset.json
+```
+
+还可以通过 mongorestore 导入，主要针对 mongodump 备份的数据（通常是 `/dump/...` 这样一个文件目录）。
+
+将 dump 文件置于 `/data` 下，可以先放在容器挂载的宿主目录下，然后进容器移动文件，事后删掉容器即可。
+
+```bash
+# 进入容器后
+cd /data
+# 检查是否有 dump 文件
+ls | grep dump
+# go..
+mongorestore
 ```
