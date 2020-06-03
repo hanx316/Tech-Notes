@@ -8,7 +8,11 @@
 
 ## Dockerfile 指令
 
-关于如何使用 Dockerfile 来定制镜像可以查看 [Dockerfile 官方文档](https://docs.docker.com/engine/reference/builder/)，下面是一些常用指令的使用说明。
+关于如何使用 Dockerfile 来定制镜像可以查看 [Dockerfile 官方文档](https://docs.docker.com/engine/reference/builder/)。
+
+官方还有一篇 Dockerfile 最佳实践的文档，推荐阅读 [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)。
+
+下面是一些常用指令的使用说明。
 
 ### FROM
 
