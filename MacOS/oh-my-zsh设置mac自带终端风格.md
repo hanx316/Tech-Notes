@@ -34,3 +34,5 @@ vi ~/.zshrc
 #### Oh-My-Zsh 升级和卸载
 
 打开终端分别运行 `upgrade_oh_my_zsh` 和 `uninstall_oh_my_zsh` 即可
+
+Note: `upgrade_oh_my_zsh` is deprecated. Use `omz update` instead.
