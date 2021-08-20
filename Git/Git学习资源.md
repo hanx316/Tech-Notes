@@ -1,4 +1,4 @@
-# 优秀的Git学习资源
+# Git学习资源
 
 收录自己学习使用Git的教程，书籍等资源
 
@@ -19,6 +19,3 @@ Git的官方文档，查命令和参数的权威地方
 
 - [图解Git](https://marklodato.github.io/visual-git-guide/index-en.html)
 图示讲解Git的一些关键概念
-
-- [沉浸式学Git](http://igit.linuxtoy.org/index.html)
-非常优秀简洁的一个教程，从入门开始，通过一些常用操作来学习
