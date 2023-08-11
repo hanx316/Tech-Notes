@@ -31,6 +31,9 @@ docker run -d --name mysql8 -p 3306:3306 -v $PWD/db:/var/lib/mysql -e MYSQL_ROOT
 
 # 以 root 用户进入 MySQL shell
 docker exec -it mysql8 sh -c 'exec mysql -uroot -p"<your_root_password>"'
+# 也可以先进容器，再执行
+docker exec -it mysql8 sh
+mysql -u root -p # 再输入密码
 ```
 
 启动容器之后，各种 MySQL 可视化软件也可以通过连接 `localhost:3306` 到本地数据库了。
